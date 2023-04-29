@@ -193,8 +193,6 @@ int main() {
 
 				while(s = _getch(), s != '1' && s != '2' && s != 27);
 
-				Cells key;
-
 				switch(s) {
 
 				//Удаление по узла ключу.
@@ -202,20 +200,14 @@ int main() {
 				{
 					CinKey("\n\n Введите ключ удаляемого узла: ");
 
-					if(dictionary->Contains(&key)) {															//Убрать!
-						try {
-							dictionary->Delete(&key);
-							cout << "\n Узел " + key.get() + " успешно удалён";
-							cout << "\n Чтобы продолжить, нажмите любую клавишу." << endl;
-							_getch();
-
-						} catch(string mess) {
-							cout << mess + "\n Чтобы продолжить, нажмите любую клавишу." << endl;
-							_getch();
-						}
-					} else {
-						cout << "\n Узла с заданным ключём не обнаружено!";
+					try {
+						dictionary->Delete(&key);
+						cout << "\n Узел " + key.get() + " успешно удалён";
 						cout << "\n Чтобы продолжить, нажмите любую клавишу." << endl;
+						_getch();
+
+					} catch(string mess) {
+						cout << mess + "\n Чтобы продолжить, нажмите любую клавишу." << endl;
 						_getch();
 					}
 
