@@ -134,5 +134,10 @@ namespace SCells {
 		return cells1.Row == cells2.Row && cells1.Column == cells2.Column;
 	}
 
+	bool operator!= (const Cells &cells1, const Cells &cells2) {
+
+		return cells1.Row != cells2.Row && cells1.Column != cells2.Column;
+	}
+
 	Cells::~Cells() {}
 }

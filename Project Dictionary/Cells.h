@@ -76,6 +76,12 @@ namespace SCells {
 		/// </summary>
 		friend bool operator== (const Cells &cells1, const Cells &cells2);
 
+		/// <summary>
+		/// Оператор сравнения
+		/// </summary>
+		friend bool operator!= (const Cells &cells1, const Cells &cells2);
+
+
 		friend string operator+ (string&, Cells&);
 	};
 
