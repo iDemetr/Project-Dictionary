@@ -69,7 +69,7 @@ int main() {
 		cout << "-------------------------------------\n";
 		cout << " (esc) Завершение программы\n";
 
-		while(s = _getch(), s < addNew &&s > deleteMenu &&s != quit);
+		while(s = _getch(), s < addNew && s > deleteMenu && s != quit);
 
 		switch(s) {
 
@@ -134,7 +134,7 @@ int main() {
 
 				LValue->Clear();
 			} else {
-				cout << "\n Узла с заданным ключём не обнаружено!";
+				cout << "\n Узла с заданным ключом не обнаружено!";
 				cout << "\n Чтобы продолжить, нажмите любую клавишу.\n"; _getch();
 			}
 
@@ -236,7 +236,7 @@ int main() {
 						}
 
 					} else {
-						cout << "\n Узла с заданным ключём не обнаружено!";
+						cout << "\n Узла с заданным ключом не обнаружено!";
 						cout << "\n Чтобы продолжить, нажмите любую клавишу." << endl;
 						_getch();
 					}
@@ -262,4 +262,6 @@ int main() {
 		isDelMenu = true;
 
 	} while(isMenu);
+
+	dictionary->Clear();
 }

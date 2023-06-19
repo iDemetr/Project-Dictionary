@@ -29,16 +29,7 @@ namespace MyList {
 
 	template<class T>
 	List<T>::~List() {
-
 		Clear();
-		//NodeList<T> *tmp = this->Head;
-
-		//while(tmp) {
-		//	tmp = this->Head->Next;
-		//	delete this->Head;
-
-		//	this->Head = tmp;
-		//}
 	}
 
 	template<class T>

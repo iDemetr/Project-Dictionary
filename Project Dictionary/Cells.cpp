@@ -81,7 +81,7 @@ namespace SCells {
 
 
 	// оператор присвоения
-	Cells &Cells::operator= (const Cells &cells) {
+	Cells& Cells::operator= (const Cells &cells) {
 
 		Row = cells.Row;
 		Column = cells.Column;
@@ -124,18 +124,17 @@ namespace SCells {
 		return stream;
 	}
 
+	//Не работает
 	string operator+(const string &str, Cells &Cells) {
 		return str + Cells.get();
 	}
 
 
 	bool operator== (const Cells &cells1, const Cells &cells2) {
-
 		return cells1.Row == cells2.Row && cells1.Column == cells2.Column;
 	}
 
 	bool operator!= (const Cells &cells1, const Cells &cells2) {
-
 		return cells1.Row != cells2.Row && cells1.Column != cells2.Column;
 	}
 

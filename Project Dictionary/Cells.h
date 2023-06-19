@@ -81,20 +81,8 @@ namespace SCells {
 		/// </summary>
 		friend bool operator!= (const Cells &cells1, const Cells &cells2);
 
-
+		//Не работает
 		friend string operator+ (string&, Cells&);
 	};
-
-	//bool operator== (Cells &cells1, const string &str) {
-	//
-	//	return cells1.get() == str;
-	//}
-
-	//Не работает.
-	//string Cells::operator+() {
-	//	return this->get();
-	//}
 }
-
-
 #endif

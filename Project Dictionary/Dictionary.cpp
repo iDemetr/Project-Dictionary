@@ -34,19 +34,7 @@ Dictionary<TKey, TValue>::Dictionary(Dictionary &dictoinary) {
 
 template<class TKey, class TValue>
 Dictionary<TKey, TValue>::~Dictionary() {
-
 	Clear();
-
-	//NodeDictionary<TKey, TValue> *tmp ;
-
-	//while(Head) {
-	//	tmp = Head->Next;
-	//	delete Head;
-
-	//	Head = tmp;
-	//}
-
-	//Count = 0;
 }
 
 template<class TKey, class TValue>

@@ -1,9 +1,6 @@
 #pragma once
 
-//#include "List.h"
 #include "Dictionary.h"
-//#include "Cells.h"
-
 #include "Header.h"
 
 using namespace SCells;
@@ -23,12 +20,12 @@ template Dictionary<Cells, List<float>>;
 
 
 /// <summary>
-/// 
+/// Функция формирования словаря из входного файла.
 /// </summary>
 /// <typeparam name="TKey"></typeparam>
 /// <typeparam name="TValue"></typeparam>
-/// <param name="PathFile"></param>
-/// <returns></returns>
+/// <param name="PathFile">Путь к считываемому файлу</param>
+/// <returns>Возвращает словарь, считанных данных из файла</returns>
 template<class TKey, class TValue>
 Dictionary<TKey, TValue>* FReadData(const string PathFile) {
 
@@ -81,11 +78,8 @@ Dictionary<TKey, TValue>* FReadData(const string PathFile) {
 }
 
 
-
-
-
  /// <summary>
- /// Функция обработки данных, находящихся в словаре.
+ /// Функция вывода данных, находящихся в словаре.
  /// </summary>
  /// <typeparam name="TKey"></typeparam>
  /// <typeparam name="TValue"></typeparam>
@@ -101,7 +95,6 @@ void ProcessData(Dictionary<TKey, TValue> *dictionary, void Func(TKey key, TValu
 		node = node->Next;
 	}
 }
-
 
 
 /// <summary>
