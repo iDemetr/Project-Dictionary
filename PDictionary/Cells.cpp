@@ -1,9 +1,9 @@
+#include "pch.h"
 #include "Cells.h"
 
 namespace SCells {
 
 	Cells::Cells() { Row = 0, Column = ""; }
-
 
 	Cells::Cells(string cells) {
 
@@ -75,6 +75,8 @@ namespace SCells {
 		std::reverse(Column.begin(), Column.end());
 	}
 
+	Cells::~Cells() {}
+
 	string Cells::get() {
 		return Column + to_string(Row);
 	}
@@ -96,7 +98,7 @@ namespace SCells {
 	/// <param name="stream"></param>
 	/// <param name="cells"></param>
 	/// <returns></returns>
-	std::ostream &operator<< (std::ostream &stream, Cells &cells) {
+	ostream &operator<< (ostream &stream, Cells &cells) {
 
 		stream << cells.get();
 
@@ -109,7 +111,7 @@ namespace SCells {
 	/// <param name="stream"></param>
 	/// <param name="cells"></param>
 	/// <returns></returns>
-	std::istream &operator>> (std::istream &stream, Cells &cells) {
+	istream &operator>> (istream &stream, Cells &cells) {
 
 		string str;
 		stream >> str;
@@ -125,10 +127,9 @@ namespace SCells {
 	}
 
 	//Не работает
-	string operator+(const string &str, Cells &Cells) {
-		return str + Cells.get();
-	}
-
+	//string operator+(const string &str, Cells &Cells) {
+	//	return str + Cells.get();
+	//}
 
 	bool operator== (const Cells &cells1, const Cells &cells2) {
 		return cells1.Row == cells2.Row && cells1.Column == cells2.Column;
@@ -138,5 +139,4 @@ namespace SCells {
 		return cells1.Row != cells2.Row && cells1.Column != cells2.Column;
 	}
 
-	Cells::~Cells() {}
 }

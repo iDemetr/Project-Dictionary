@@ -3,14 +3,22 @@
 #ifndef CELLS_H
 #define CELLS_H
 
-#include "Header.h"
+#ifdef DICTIONARY_EXPORTS
+#define CELLS_API __declspec(dllexport)
+#else
+#define CELLS_API __declspec(dllimport)
+#endif
+
+#include "pch.h"
 
 using namespace std;
 
 namespace SCells {
 
-	//Пользовательский класс, определяющий тип Ячейки.
-	class Cells {
+	/// <summary>
+	/// Пользовательский класс, определяющий тип Ячейки.
+	/// </summary>
+	class CELLS_API Cells {
 
 	private:
 		string Column;
@@ -57,13 +65,13 @@ namespace SCells {
 		/// <param name="in"></param>
 		/// <param name="str"></param>
 		/// <returns></returns>
-		friend std::ostream &operator<< (std::ostream &, Cells &);
+		friend ostream &operator<< (ostream &, Cells &);
 
 		
 		/// <summary>
 		/// Оператор ввода.
 		/// </summary>
-		friend std::istream &operator>> (std::istream &, Cells &);
+		friend istream &operator>> (istream &, Cells &);
 
 
 		/// <summary>
@@ -82,7 +90,7 @@ namespace SCells {
 		friend bool operator!= (const Cells &cells1, const Cells &cells2);
 
 		//Не работает
-		friend string operator+ (string&, Cells&);
+		//friend string operator+ (string&, Cells&);
 	};
 }
 #endif

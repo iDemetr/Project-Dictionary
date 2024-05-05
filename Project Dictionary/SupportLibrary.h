@@ -1,9 +1,11 @@
 #pragma once
 
+//#include "pch.h"
 #include "Dictionary.h"
 #include "Header.h"
 
 using namespace SCells;
+using namespace SDictionary;
 using namespace std;
 
 //Предворительное инстанцирование шаблонов списка

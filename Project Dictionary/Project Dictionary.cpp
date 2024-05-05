@@ -1,10 +1,5 @@
-﻿#include <windows.h>
-
-//#include "List.h"
-//#include "Dictionary.h" 
+﻿#include "pch.h"
 #include "SupportLibrary.h"
-
-//#include "Cells.h"
 
 using namespace std;
 using namespace MyList;
